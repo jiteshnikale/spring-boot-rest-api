@@ -30,9 +30,9 @@ public class UserController {
     public  ResponseEntity<UserDto> getUserById(@PathVariable Long id) {
         UserDto user = userService.getUserById(id);
 
-        if (user == null) {
+        /*if (user == null) {
             throw new ResourceNotFoundException(String.format("User not found for the user id %d", id));
-        }
+        }*/
 
         return ResponseEntity.ok(user);
     }
@@ -49,9 +49,9 @@ public class UserController {
     public ResponseEntity<UserDto> updateUser(@RequestBody User user, @PathVariable Long id) {
         UserDto updatedUser = userService.updateUser(user, id);
 
-        if (updatedUser ==  null) {
+        /*if (updatedUser ==  null) {
             throw new ResourceNotFoundException(String.format("User not found for the user id %d", id));
-        }
+        }*/
 
         return ResponseEntity.ok(updatedUser);
     }
