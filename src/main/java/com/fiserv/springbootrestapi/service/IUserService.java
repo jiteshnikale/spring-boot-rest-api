@@ -1,17 +1,18 @@
 package com.fiserv.springbootrestapi.service;
 
+import com.fiserv.springbootrestapi.dto.UserDto;
 import com.fiserv.springbootrestapi.entity.User;
 
 import java.util.List;
 
 public interface IUserService {
-    User createUser(User user);
+    UserDto createUser(UserDto userDto);
 
-    User getUserById(Long id);
+    UserDto getUserById(Long id);
 
-    List<User> getAllUsers();
+    List<UserDto> getAllUsers();
 
-    User updateUser(User user, Long id);
+    UserDto updateUser(User user, Long id);
 
     void deleteUser(Long id);
 }
