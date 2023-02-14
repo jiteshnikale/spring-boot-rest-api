@@ -81,7 +81,7 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserDto updateUser(User user, Long id) {
+    public UserDto updateUser(UserDto user, Long id) {
         User existingUser = userRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException(String.format("User not found for the user id %d", id))
         );
